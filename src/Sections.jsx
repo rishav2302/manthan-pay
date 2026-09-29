@@ -557,7 +557,7 @@ export function Partner({ toast }) {
           {/* IMAGE ABOVE */}
           <div className="partner-image">
             <img
-              src="/images/manthan-pay-partner-banner.png"
+              src={`${import.meta.env.BASE_URL}images/manthan-pay-partner-banner.png`}
               alt="Manthan Pay digital services"
             />
           </div>
