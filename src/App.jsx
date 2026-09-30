@@ -7,6 +7,20 @@ import { ServiceTutorials, TUTORIALS } from "./Tutorials.jsx";
 import Dashboard from "./Dashboard.jsx";
 import { SERVICES, INFO } from "./data.js";
 
+const LANGUAGES = [
+  { code: "en", name: "English", native: "English" },
+  { code: "hi", name: "Hindi", native: "हिन्दी" },
+  { code: "bn", name: "Bengali", native: "বাংলা" },
+  { code: "mr", name: "Marathi", native: "मराठी" },
+  { code: "te", name: "Telugu", native: "తెలుగు" },
+  { code: "ta", name: "Tamil", native: "தமிழ்" },
+  { code: "gu", name: "Gujarati", native: "ગુજરાતી" },
+  { code: "kn", name: "Kannada", native: "ಕನ್ನಡ" },
+  { code: "ml", name: "Malayalam", native: "മലയാളം" },
+  { code: "pa", name: "Punjabi", native: "ਪੰਜਾਬੀ" },
+  { code: "or", name: "Odia", native: "ଓଡ଼ିଆ" },
+];
+
 const HERO_IMAGES = [
   {
     image:
@@ -71,7 +85,7 @@ function HeroVisual() {
 }
 
 export default function App() {
-  const { t, lang, toggle } = useT();
+  const { t, lang, setLang } = useT();
   const [user, setUser] = useState(() =>
     JSON.parse(localStorage.getItem("mp_session") || "null"),
   );
@@ -146,14 +160,18 @@ export default function App() {
             </nav>
           )}
           <div className="nav-cta">
-            <button
-              className="lang"
-              onClick={toggle}
-              aria-label="Change language"
+            <select
+              className="language-select"
+              value={lang}
+              onChange={(e) => setLang(e.target.value)}
+              aria-label="Select language"
             >
-              <b className={lang === "en" ? "on" : ""}>EN</b>
-              <b className={lang === "hi" ? "on" : ""}>हिं</b>
-            </button>
+              {LANGUAGES.map((language) => (
+                <option key={language.code} value={language.code}>
+                  {language.native}
+                </option>
+              ))}
+            </select>
             {user ? (
               <button className="btn ghost" onClick={logout}>
                 {t("Log out")}
