@@ -3,6 +3,7 @@ import { useT } from "./i18n.jsx";
 import { Logo, LiveTxn, CountUp, useReveal } from "./components.jsx";
 import Auth from "./Auth.jsx";
 import { Why, Ecosystem, States, Voices, Partner, Trust } from "./Sections.jsx";
+import { ServiceTutorials, TUTORIALS } from "./Tutorials.jsx";
 import Dashboard from "./Dashboard.jsx";
 import { SERVICES, INFO } from "./data.js";
 
@@ -133,6 +134,7 @@ export default function App() {
             <nav className={"links" + (menu ? " open" : "")}>
               {[
                 ["services", "Services"],
+                ["tutorials", "Tutorials"],
                 ["ecosystem", "Ecosystem"],
                 ["states", "States"],
                 ["partner", "Partner with us"],
@@ -263,7 +265,7 @@ export default function App() {
                   ]),
                   ...INFO,
                 ].map(([i, tt, d]) => (
-                  <article className="card rv" key={tt}>
+                  <article className="card service-card rv" key={tt}>
                     <div className="ic">{i}</div>
                     <h3>{t(tt)}</h3>
                     <p>{t(d)}</p>
@@ -272,6 +274,8 @@ export default function App() {
               </div>
             </div>
           </section>
+
+          <ServiceTutorials />
 
           <section id="why" className="alt">
             <div className="wrap">

@@ -940,7 +940,6 @@ footer {
     );
   }
 
-
   .banner-controls {
     left: 28px;
     bottom: 24px;
@@ -956,7 +955,6 @@ footer {
     height: 540px;
     border-radius: 20px;
   }
-
 
   .banner-controls {
     left: 22px;
@@ -1169,7 +1167,6 @@ footer {
   filter: drop-shadow(0 25px 45px rgba(11, 58, 120, 0.22));
 }
 
-
 /* =========================================================
    STATES
    ========================================================= */
@@ -1287,7 +1284,6 @@ footer {
   .india-map {
     width: 270px;
   }
-
 
   .state-list {
     grid-template-columns: 1fr;
@@ -2015,7 +2011,6 @@ header .links {
   letter-spacing: -0.6px;
 }
 
-
 /* =========================================================
    TABLET
    ========================================================= */
@@ -2072,7 +2067,6 @@ header .links {
     border-radius: 20px;
   }
 
-
   .why-image-overlay {
     left: 20px;
     right: 20px;
@@ -2113,4 +2107,864 @@ header .links {
 #partner {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+/* =========================================================
+   SERVICE TUTORIALS
+========================================================= */
+.tutorial-section {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(19, 136, 8, 0.08), transparent 28%),
+    linear-gradient(180deg, #fff, #f6f9ff);
+  overflow: hidden;
+}
+.tutorial-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+.tutorial-feature {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 30px;
+  align-items: stretch;
+  margin-bottom: 28px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 24px 60px -46px rgba(11, 58, 120, 0.55);
+}
+.tutorial-feature-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+}
+.tutorial-feature-copy h3 {
+  margin: 12px 0 12px;
+  font-size: clamp(26px, 3vw, 40px);
+}
+.tutorial-feature-copy p {
+  max-width: 500px;
+  margin-bottom: 22px;
+  color: var(--muted);
+}
+.tutorial-badge {
+  width: fit-content;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: var(--blue-soft);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.tutorial-animation {
+  position: relative;
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.95),
+      rgba(232, 240, 255, 0.82) 48%,
+      rgba(245, 247, 251, 0.9)
+    ),
+    var(--surface);
+  border: 1px solid var(--line);
+}
+.tutorial-orbit {
+  position: absolute;
+  border: 1px dashed rgba(11, 58, 120, 0.18);
+  border-radius: 50%;
+  animation: tutorialSpin 18s linear infinite;
+}
+.orbit-one {
+  width: 250px;
+  height: 250px;
+}
+.orbit-two {
+  width: 420px;
+  height: 420px;
+  animation-direction: reverse;
+  animation-duration: 26s;
+}
+@keyframes tutorialSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.tutorial-scene {
+  position: relative;
+  z-index: 2;
+  width: min(94%, 760px);
+  display: grid;
+  grid-template-columns:
+    100px minmax(36px, 1fr) minmax(170px, 1.7fr) minmax(36px, 1fr)
+    100px;
+  align-items: center;
+  gap: 12px;
+}
+.tutorial-node {
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  padding: 12px 8px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 14px 30px -24px rgba(11, 58, 120, 0.55);
+}
+.tutorial-node span {
+  font-size: 28px;
+}
+.tutorial-node small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+.tutorial-core {
+  min-height: 150px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 5px;
+  padding: 20px;
+  border-radius: 26px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(145deg, var(--navy), #1b63c9);
+  box-shadow: 0 24px 50px -28px rgba(11, 58, 120, 0.7);
+  animation: tutorialPop 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.tutorial-core span {
+  font-size: 42px;
+}
+.tutorial-core strong {
+  font-size: 18px;
+}
+.tutorial-core small {
+  max-width: 250px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  line-height: 1.45;
+}
+@keyframes tutorialPop {
+  from {
+    opacity: 0;
+    transform: scale(0.88) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.tutorial-connector {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.tutorial-connector i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--orange);
+  animation: tutorialDot 1.3s infinite ease-in-out;
+}
+.tutorial-connector i:nth-child(2) {
+  animation-delay: 0.18s;
+}
+.tutorial-connector i:nth-child(3) {
+  animation-delay: 0.36s;
+}
+@keyframes tutorialDot {
+  50% {
+    transform: translateX(8px);
+    opacity: 0.35;
+  }
+}
+.tutorial-connector.reverse i {
+  animation-direction: reverse;
+}
+.tutorial-progress {
+  position: absolute;
+  z-index: 4;
+  bottom: 16px;
+  display: flex;
+  gap: 7px;
+}
+.tutorial-progress button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #b9c4d8;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.tutorial-progress button.active {
+  width: 24px;
+  border-radius: 999px;
+  background: var(--orange);
+}
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.tutorial-card {
+  display: flex;
+  gap: 16px;
+  min-height: 205px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  transition: 0.25s ease;
+  transition-delay: calc(var(--i) * 20ms);
+}
+.tutorial-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(242, 106, 27, 0.55);
+  box-shadow: 0 22px 45px -34px rgba(11, 58, 120, 0.65);
+}
+.tutorial-card-icon,
+.tutorial-modal-head .tutorial-card-icon {
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--blue-soft);
+  font-size: 25px;
+}
+.tutorial-card-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.tutorial-card-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.tutorial-card h3 {
+  margin: 7px 0 6px;
+  font-size: 21px;
+}
+.tutorial-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.tutorial-card button,
+.service-tutorial-link {
+  width: fit-content;
+  margin-top: auto;
+  padding: 9px 0 0;
+  border: 0;
+  background: transparent;
+  color: var(--orange);
+  font-weight: 800;
+  cursor: pointer;
+}
+.tutorial-card button span,
+.service-tutorial-link span {
+  display: inline-block;
+  transition: 0.2s;
+}
+.tutorial-card button:hover span,
+.service-tutorial-link:hover span {
+  transform: translateX(5px);
+}
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+.service-tutorial-link {
+  margin-top: 15px;
+}
+.tutorial-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.tutorial-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(7, 18, 37, 0.72);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+.tutorial-modal-box {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1040px);
+  max-height: min(92vh, 900px);
+  overflow: auto;
+  padding: 30px;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 35px 100px -35px rgba(0, 0, 0, 0.55);
+  animation: tutorialModalIn 0.35s ease both;
+}
+@keyframes tutorialModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+}
+.tutorial-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--navy);
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 3;
+}
+.tutorial-modal-head {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 48px;
+}
+.tutorial-modal-head h2 {
+  font-size: clamp(28px, 4vw, 42px);
+}
+.tutorial-modal-description {
+  max-width: 760px;
+  margin: 12px 0 18px;
+  color: var(--muted);
+}
+.tutorial-modal-box .tutorial-animation {
+  min-height: 330px;
+}
+.tutorial-step-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+.tutorial-step-list > div {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+}
+.tutorial-step-list span {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+.tutorial-step-list strong {
+  display: block;
+  color: var(--navy);
+  font-size: 14px;
+}
+.tutorial-step-list p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+@media (max-width: 1000px) {
+  .tutorial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .tutorial-feature {
+    grid-template-columns: 1fr;
+  }
+  .tutorial-step-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .tutorial-feature {
+    padding: 18px;
+    border-radius: 20px;
+  }
+  .tutorial-animation {
+    min-height: 260px;
+  }
+  .tutorial-scene {
+    grid-template-columns: 64px 24px minmax(120px, 1fr) 24px 64px;
+    gap: 5px;
+  }
+  .tutorial-node {
+    padding: 8px 4px;
+    border-radius: 14px;
+  }
+  .tutorial-node span {
+    font-size: 22px;
+  }
+  .tutorial-node small {
+    font-size: 9px;
+  }
+  .tutorial-core {
+    min-height: 135px;
+    padding: 14px;
+    border-radius: 20px;
+  }
+  .tutorial-core span {
+    font-size: 32px;
+  }
+  .tutorial-core strong {
+    font-size: 15px;
+  }
+  .tutorial-core small {
+    font-size: 10px;
+  }
+  .tutorial-grid {
+    grid-template-columns: 1fr;
+  }
+  .tutorial-modal {
+    padding: 10px;
+  }
+  .tutorial-modal-box {
+    padding: 22px 16px;
+    border-radius: 22px;
+  }
+  .tutorial-modal-box .tutorial-animation {
+    min-height: 270px;
+  }
+}
+@media (max-width: 480px) {
+  .tutorial-step-list {
+    grid-template-columns: 1fr;
+  }
+  .tutorial-card {
+    min-height: 0;
+  }
+  .tutorial-card-icon {
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+  }
+  .orbit-two {
+    width: 330px;
+    height: 330px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tutorial-orbit,
+  .tutorial-core,
+  .tutorial-connector i {
+    animation: none;
+  }
+}
+
+.tutorial-video-wrap {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #071225;
+  border: 1px solid rgba(11, 58, 120, 0.18);
+}
+.tutorial-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  background: #071225;
+}
+.tutorial-video-label {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(7, 18, 37, 0.78);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 11px;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+}
+.tutorial-video-label span {
+  color: #ff7b3d;
+}
+.tutorial-modal-box .tutorial-video-wrap,
+.tutorial-modal-box .tutorial-video {
+  min-height: 330px;
+}
+@media (max-width: 700px) {
+  .tutorial-video-wrap,
+  .tutorial-video,
+  .tutorial-modal-box .tutorial-video-wrap,
+  .tutorial-modal-box .tutorial-video {
+    min-height: 270px;
+  }
+}
+/* =========================================================
+   SERVICE TUTORIALS
+   ========================================================= */
+
+.tutorial-section {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.tutorial-shell {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+
+  gap: 52px;
+
+  width: 100%;
+
+  padding: 38px 48px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe6ef;
+
+  border-radius: 32px;
+
+  box-shadow: 0 20px 55px rgba(11, 58, 120, 0.08);
+
+  overflow: hidden;
+}
+
+/* ---------------------------------------------------------
+   LEFT SIDE
+   --------------------------------------------------------- */
+
+.tutorial-copy {
+  max-width: 570px;
+}
+
+.tutorial-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: #eef5ff;
+
+  color: #0b3a78;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.tutorial-kicker-arrow {
+  color: #f26a1b;
+  font-size: 12px;
+}
+
+.tutorial-copy h2 {
+  max-width: 540px;
+
+  margin: 0 0 20px;
+
+  color: #0b3a78;
+
+  font-size: clamp(38px, 4vw, 58px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1.8px;
+}
+
+.tutorial-copy p {
+  max-width: 560px;
+
+  margin: 0 0 30px;
+
+  color: #52617a;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+}
+
+/* ---------------------------------------------------------
+   WATCH BUTTON
+   --------------------------------------------------------- */
+
+.tutorial-watch {
+  min-width: 290px;
+
+  padding: 16px 26px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 12px 28px rgba(242, 106, 27, 0.22);
+}
+
+.tutorial-watch:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------------
+   RIGHT SIDE
+   --------------------------------------------------------- */
+
+.tutorial-preview {
+  width: 100%;
+  min-width: 0;
+}
+
+.tutorial-video-card {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid #183f78;
+
+  border-radius: 24px;
+
+  background: #f4f7fb;
+
+  box-shadow: 0 18px 45px rgba(11, 58, 120, 0.12);
+}
+
+/* ---------------------------------------------------------
+   VIDEO HEADER
+   --------------------------------------------------------- */
+
+.tutorial-video-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 66px;
+
+  padding: 0 22px;
+
+  background: #173f78;
+
+  color: #ffffff;
+}
+
+.tutorial-video-header strong {
+  font-size: 25px;
+
+  letter-spacing: 0.5px;
+}
+
+.tutorial-video-header span {
+  color: #ffbd78;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+/* ---------------------------------------------------------
+   VIDEO
+   --------------------------------------------------------- */
+
+.tutorial-video {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  min-height: 310px;
+
+  object-fit: cover;
+
+  background: #071327;
+}
+
+/* ---------------------------------------------------------
+   VIDEO FOOTER
+   --------------------------------------------------------- */
+
+.tutorial-video-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 54px;
+
+  padding: 0 20px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.tutorial-video-footer span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.tutorial-video-footer i {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #f26a1b;
+
+  display: inline-block;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .tutorial-shell {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+
+    padding: 36px;
+  }
+
+  .tutorial-copy {
+    max-width: 700px;
+  }
+
+  .tutorial-copy h2 {
+    max-width: 700px;
+  }
+
+  .tutorial-preview {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .tutorial-section {
+    padding: 45px 0;
+  }
+
+  .tutorial-shell {
+    width: calc(100% - 24px);
+
+    margin: 0 auto;
+
+    padding: 28px 20px;
+
+    border-radius: 24px;
+
+    gap: 28px;
+  }
+
+  .tutorial-kicker {
+    font-size: 11px;
+
+    padding: 7px 11px;
+  }
+
+  .tutorial-copy h2 {
+    font-size: 34px;
+
+    letter-spacing: -1px;
+  }
+
+  .tutorial-copy p {
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+  .tutorial-watch {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+  .tutorial-video-card {
+    border-radius: 18px;
+  }
+
+  .tutorial-video-header {
+    min-height: 52px;
+
+    padding: 0 16px;
+  }
+
+  .tutorial-video-header strong {
+    font-size: 20px;
+  }
+
+  .tutorial-video-header span {
+    font-size: 10px;
+  }
+
+  .tutorial-video {
+    min-height: 210px;
+  }
+
+  .tutorial-video-footer {
+    padding: 0 14px;
+
+    font-size: 11px;
+  }
 }
